@@ -1,6 +1,7 @@
 import base64 
 import os
 from pprint import pprint
+from time import sleep
 
 import requests
 from bs4 import BeautifulSoup
@@ -122,7 +123,7 @@ for group in groups:
         # print(song_text)
         # print('='*50)
         create_post(group['name'], song['title'], song_text, group['categories'], group['featured_media'])
-        break
+        sleep(1)
 
 
 # response = create_post(post_json, category_json)
